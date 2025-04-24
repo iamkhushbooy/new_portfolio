@@ -14,7 +14,7 @@ const Projectprops = ({
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.5, delay: 0.2 }}
       viewport={{ once: false, amount: 0.3 }} 
-      className="relative shadow-xl hover:shadow-lg rounded-3xl flex flex-col m-6 p-6"
+      className="relative shadow-xl hover:shadow-lg rounded-3xl flex flex-col mx-6 p-6 mb-6"
       style={{
         maxWidth: width,
         minHeight: height,

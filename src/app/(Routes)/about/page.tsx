@@ -3,17 +3,26 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const techStack = [
-    'TypeScript', 'JavaScript','Java','Next.js', 'React.js','Node.js','Express.js', 
-    'MongoDB', 'Tailwind CSS','Git & GitHub','NodeMailer' ,'Vercel'
+    'TypeScript', 'JavaScript', 'Java', 'Next.js', 'React.js', 'Node.js', 'Express.js',
+    'MongoDB', 'Tailwind CSS', 'Git & GitHub', 'NodeMailer', 'Vercel'
   ];
 
   return (
-    <div className="min-h-screen px-6 py-12 bg-gradient-to-br from-blue-50 to-white text-gray-800">
+    <div
+      id="about"
+      className="min-h-screen px-6 py-12 bg-gradient-to-br
+     from-blue-50 to-white text-gray-800 scroll-mt-16">
       <div className="max-w-5xl mx-auto">
-        {/* CAREER TIMELINE / STORY */}
         <section className="mb-20">
-          <h2 className="text-2xl text-[rgb(59,144,197)] uppercase font-semibold mb-6 tracking-widest text-center">My Journey</h2>
-          <div className="space-y-6 border-l-4 border-[rgb(59,144,197)] pl-6">
+          <h2
+            className=" text-xl text-[rgb(59,144,197)] 
+            uppercase font-semibold mb-6 tracking-widest text-center
+             md:text-2xl">
+            My Journey
+          </h2>
+
+          <div className="space-y-6 border-l-4 border-[rgb(59,144,197)] pl-6 text-[14px]
+          md:text-[18px]">
             {[
               {
                 title: "Full-Stack Developer",
@@ -50,8 +59,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: false }}
-                className="bg-white p-4 rounded-xl shadow hover:shadow-md transition"
-              >
+                className="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
                 <h3 className="text-xl font-semibold">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </motion.div>
@@ -61,11 +69,13 @@ export default function About() {
 
         {/* STACK & TOOLS */}
         <section>
-          <h2 className="text-2xl text-[rgb(59,144,197)] uppercase font-semibold mb-6 tracking-widest text-center">My Tech Stack</h2>
-          <p className="text-center text-lg mb-8">
+          <h2 className="text-xl text-[rgb(59,144,197)] uppercase 
+      font-semibold mb-6 tracking-widest text-center
+      md:text-2xl">My Tech Stack</h2>
+          <p className="w-[80%] ml-[10%] text-center font-light text-lg mb-8 text-[16px]
+          md:text-[18px]">
             Tools and technologies I’m comfortable with, and enjoy using:
           </p>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
             {techStack.map((item, index) => (
               <motion.div

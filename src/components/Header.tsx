@@ -20,7 +20,7 @@ const Header = () => {
 
     }
     return (
-        <nav className='w-full h-[70px] flex items-center'
+        <nav className='w-full h-[70px] flex items-center fixed'
             style={{
                 background: "radial-gradient(circle at left top, #e9f6f7 0%, white 60%)",
             }}
@@ -61,22 +61,22 @@ const Header = () => {
                   flex justify-around items-center font-semibold
                   md:w-[25%] mr-10'>
                         <Link
-                            href={'/'}
-                            className={`${pathName === '/' ?
+                            href={'./#home'}
+                            className={`${pathName === './#home' ?
                                 ' text-[rgb(59,144,197)]' :
                                 'text-gray-500  hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
                             Home
                         </Link>
                         <Link
-                            href={'/about'}
-                            className={`${pathName === '/about' ?
+                            href={'./#about'}
+                            className={`${pathName === './#about' ?
                                 ' text-[rgb(59,144,197)]' :
                                 'text-gray-500 hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
                             About
                         </Link>
                         <Link
-                            href={'/projects'}
-                            className={`${pathName === '/projects' ?
+                            href={'./#projects'}
+                            className={`${pathName === './#projects' ?
                                 ' text-[rgb(59,144,197)]' :
                                 'text-gray-500 hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
                             Projects
@@ -90,24 +90,22 @@ const Header = () => {
                     </div>
                 </>}
             {isMenuOpen &&
-                <div id="forbuger" className='w-full h-screen 
-                  flex justify-center items-center flex-col
-                  absolute top-[70px] overflow-hidden'>
+                <div id="forbuger" className='w-full mt-[100px] underline
+                  flex justify-center items-center 
+                   absolute overflow-hidden'>
                     <Link onClick={toggle}
-                        className='m-3 font-bold text-[rgb(59,144,197)] 
-                        hover:text-[rgb(59,144,197)] underline decoration-transparent  
-                        hover:decoration-inherit hover:underline-offset-4' href={'/'}>
+                          className='m-3 font-bold text-[rgb(59,144,197)]' href={'/'}>
                         Home
                     </Link>
                     <Link
                         onClick={toggle}
                         className='m-3 font-bold text-[rgb(59,144,197)]' href={'/about'}>
-                        Project
+                        About
                     </Link>
                     <Link
                         onClick={toggle}
                         className='m-3 font-bold text-[rgb(59,144,197)]' href={'/projects'}>
-                        Project
+                        Projects
                     </Link>
                     <Link
                         onClick={toggle}
