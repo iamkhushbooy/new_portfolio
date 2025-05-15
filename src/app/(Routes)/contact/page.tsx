@@ -4,7 +4,9 @@ import Form from '@/components/Form/page'
 const page = () => {
   return (
     <div
-      className='w-full min-h-screen flex flex-col md:flex-row justify-center items-center'
+      className='w-full min-h-screen flex flex-col md:flex-row 
+      justify-center items-center pt-30
+    '
      
     >
       {/* Wrapper for Both Sections */}

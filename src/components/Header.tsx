@@ -19,6 +19,16 @@ const Header = () => {
         setIsMenuOpen(!isMenuOpen)
 
     }
+    useEffect(() => {
+        const handleScroll = () => {
+          if (isMenuOpen) setIsMenuOpen(false);
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [isMenuOpen]);
     return (
         <nav className='w-full h-[70px] flex items-center fixed'
             style={{
@@ -92,7 +102,10 @@ const Header = () => {
             {isMenuOpen &&
                 <div id="forbuger" className='w-full mt-[100px] underline
                   flex justify-center items-center 
-                   absolute overflow-hidden'>
+                   absolute overflow-hidden'
+                   style={{
+                    background: "radial-gradient(circle at left top, #e9f6f7 0%, white 60%)",
+                }}>
                     <Link onClick={toggle}
                           className='m-3 font-bold text-[rgb(59,144,197)]' href={'/'}>
                         Home
