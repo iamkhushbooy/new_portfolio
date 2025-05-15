@@ -20,8 +20,7 @@ const Projectprops = ({
         maxWidth: width,
         minHeight: height,
         background: `radial-gradient(circle at left top, #e9f6f7 0%, white 60%)`,
-      }}
-    >
+      }}>
       <h1 className="text-[20px] font-bold mb-8 text-center text-[rgb(70,130,168)]">
         {topic}
       </h1>
@@ -33,15 +32,15 @@ const Projectprops = ({
         <a
           href={l}
           target="_blank"
-          className="px-3 py-2 rounded-lg border border-gray-400 hover:bg-pink-500/50 hover:text-white transition"
-        >
+          className="px-3 py-2 rounded-lg border border-gray-400
+           hover:bg-pink-500/50 hover:text-white transition">
           Live Demo
         </a>
         <a
           href={a}
           target="_blank"
-          className="px-2 py-2 rounded-lg border border-gray-400 hover:bg-[rgb(70,130,168)] hover:text-white transition"
-        >
+          className="px-2 py-2 rounded-lg border border-gray-400 
+          hover:bg-[rgb(70,130,168)] hover:text-white transition">
           Source Code
         </a>
       </div>

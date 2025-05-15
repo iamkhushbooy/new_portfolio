@@ -30,7 +30,7 @@ const Header = () => {
         };
       }, [isMenuOpen]);
     return (
-        <nav className='w-full h-[70px] flex items-center fixed'
+        <nav className='w-full h-[70px] flex items-center fixed z-50'
             style={{
                 background: "radial-gradient(circle at left top, #e9f6f7 0%, white 60%)",
             }}
@@ -100,31 +100,37 @@ const Header = () => {
                     </div>
                 </>}
             {isMenuOpen &&
-                <div id="forbuger" className='w-full mt-[100px] underline
-                  flex justify-center items-center 
+                <div id="forbuger" className='w-full mt-[100px]
+                  flex justify-center items-center gap-4
                    absolute overflow-hidden'
-                   style={{
-                    background: "radial-gradient(circle at left top, #e9f6f7 0%, white 60%)",
-                }}>
-                    <Link onClick={toggle}
-                          className='m-3 font-bold text-[rgb(59,144,197)]' href={'/'}>
-                        Home
-                    </Link>
-                    <Link
-                        onClick={toggle}
-                        className='m-3 font-bold text-[rgb(59,144,197)]' href={'/about'}>
-                        About
-                    </Link>
-                    <Link
-                        onClick={toggle}
-                        className='m-3 font-bold text-[rgb(59,144,197)]' href={'/projects'}>
-                        Projects
-                    </Link>
-                    <Link
-                        onClick={toggle}
-                        className='m-3 font-bold text-[rgb(59,144,197)]' href={'/contact'}>
-                        Contact
-                    </Link>
+               
+                   >
+                     <Link
+                            href={'./#home'}
+                            className={`${pathName === './#home' ?
+                                ' text-[rgb(59,144,197)]' :
+                                'text-gray-500  hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
+                            Home
+                        </Link>
+                        <Link
+                            href={'./#about'}
+                            className={`${pathName === './#about' ?
+                                ' text-[rgb(59,144,197)]' :
+                                'text-gray-500 hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
+                            About
+                        </Link>
+                        <Link
+                            href={'./#projects'}
+                            className={`${pathName === './#projects' ?
+                                ' text-[rgb(59,144,197)]' :
+                                'text-gray-500 hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
+                            Projects
+                        </Link>
+                        <Link href={'/contact'}
+                            className={`${pathName === '/contact' ?
+                                ' text-[rgb(59,144,197)]' : 'text-gray-500 hover:text-[rgb(59,144,197)] underline decoration-transparent hover:decoration-inherit hover:underline-offset-4'}`}>
+                            Contact
+                        </Link>
                 </div>
             }
         </nav>

@@ -11,19 +11,19 @@ export default function About() {
     <div
       id="about"
       className="min-h-screen px-6 py-12 bg-gradient-to-br
-     from-blue-50 to-white text-gray-800 scroll-mt-16 pt-30
-     md:pt-5">
+      from-blue-50 to-white text-[rgb(59,144,197)] scroll-mt-16 pt-10
+      md:pt-5">
       <div className="max-w-5xl mx-auto">
         <section className="mb-20">
           <h2
-            className=" text-xl text-gray-700 
+            className=" text-xl text-[rgb(59,144,197)]
             uppercase font-semibold mb-6 tracking-widest text-center
              md:text-2xl md:text-[rgb(59,144,197)]">
             My Journey
           </h2>
 
           <div className="space-y-6 border-l-4 border-[rgb(59,144,197)] pl-6 text-[14px]
-          md:text-[18px]">
+           md:text-[18px]">
             {[
               {
                 title: "Full-Stack Developer",
