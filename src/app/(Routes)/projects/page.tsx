@@ -28,7 +28,7 @@ const Page = () => {
           text="A platform for building personalized portfolio profiles. 
           Users can add skills, projects, and social links to create a unique, 
           shareable portfolio. Designed for ease of use with a clean, responsive interface."
-          l="https://tech_bond.vercel.app/"
+          l="https://tech-bond.vercel.app/"
           a="https://github.com/iamkhushbooy/tech_bond"
         />
 
