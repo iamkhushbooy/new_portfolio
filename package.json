@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.18.1",
     "motion": "^12.7.4",
     "next": "15.2.1",
     "nodemailer": "^6.10.0",
