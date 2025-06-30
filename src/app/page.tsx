@@ -52,7 +52,7 @@ const page = () => {
             md:text-[25px]'>
               — a{' '}
               <span className='text-[20px] font-bold text-[rgb(59,144,197)]
-              md:text-[25px]'>Next.js</span><span className="text-[20px]
+              md:text-[25px]'>Next.jsss</span><span className="text-[20px]
               md:text-[22px]"> Developer.</span>
             </h2>
             <p className='font-light mt-4 px-4 text-[16px]
